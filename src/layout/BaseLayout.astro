@@ -1,0 +1,55 @@
+---
+import Header from '../components/Header.astro';
+import '@fontsource/manrope';
+
+const title = "GoodIP";
+const description = "GoodIP gives you everything you need to protect your business · Built by data scientists and top lawyers · 10x more likely to secure funding · 75% more earnings.";
+const image = "";
+const url = "https://goodip.io";
+const author = "GoodIP GmbH";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{title}</title>
+      
+      
+      <meta property=“og:description“ content={description} />
+      <meta property="og:type" content="website" />
+      
+      <!-- Meta tags for social sharing (Open Graph and Twitter Card) -->
+      <meta property="og:title" content="{title}">
+      <meta property="og:description" content={description}>
+      <meta property="og:image" content={image}>
+      <meta property="og:url" content={url}>
+      <meta name="twitter:card" content="summary_large_image">
+      
+      <!-- Canonical URL for search engine optimization -->
+      <link rel="canonical" href={url}>
+      
+      <!-- Robots meta tag to control search engine indexing -->
+      <meta name="robots" content="index, follow">
+      
+      <!-- Additional metadata for SEO -->
+      <meta name="author" content={author}>
+      
+      <!-- Favicon and Apple Touch Icon (customize these with your own icons) -->
+      <link rel="icon" href="/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  </head>
+  <body class="h-full">
+      <Header />
+      <main>
+        <slot>
+      </main>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: "manrope", sans;
+  }
+</style>
