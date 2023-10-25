@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+const historyItems = [{
+  year: 2017,
+  text: 'At GoodIP, our journey began with a clear vision - to revolutionize the way startups navigate the intricate world of intellectual property (IP).'
+}, {
+  year: 2018,
+  text: 'At GoodIP, our journey began with a clear vision - to revolutionize the way startups navigate the intricate world of intellectual property (IP).'
+}, {
+  year: 2019,
+  text: 'At GoodIP, our journey began with a clear vision - to revolutionize the way startups navigate the intricate world of intellectual property (IP).'
+}, {
+  year: 2020,
+  text: 'At GoodIP, our journey began with a clear vision - to revolutionize the way startups navigate the intricate world of intellectual property (IP).'
+}, {
+  year: 2021,
+  text: 'At GoodIP, our journey began with a clear vision - to revolutionize the way startups navigate the intricate world of intellectual property (IP).'
+}, {
+  year: 2022,
+  text: 'At GoodIP, our journey began with a clear vision - to revolutionize the way startups navigate the intricate world of intellectual property (IP).'
+}, {
+  year: 2023,
+  text: 'At GoodIP, our journey began with a clear vision - to revolutionize the way startups navigate the intricate world of intellectual property (IP).'
+}]
+---
+
+<BaseLayout>
+  <div class="bg-background-light pt-[40px] pr-[16px] pl-[16px] md:pt-[80px] md:pr-[80px] md:pl-[80px] text-body-dark">
+    <h1 class="leading-[48px] text-center text-[40px] md:text-[56px] font-bold">About us</h1>
+    <div class="pt-[40px] pb-[40px] md:pt-[80px] md:pb-[80px] md:flex">
+      <div class="p-[16px] md:p-[32px] mb-[24px] md:mb-0 rounded-2xl border border-2 border-gradient-t-r from-#CCE7ED to-#8DB2BA md:mr-[12px] md:w-1/2">
+        <div class="pb-[24px] md:pb-[48px] text-[32px] leading-[32px]] md:leading-[40px] md:text-[40px] font-bold">Mission</div>
+        <p class="text-[18px] md:text-[20px">At GoodIP, we're driven by a singular mission: to empower innovators and businesses with strategic intellectual property (IP) advantages. Our aim is to protect, amplify, and maximize the value of your innovations. GoodIP is a leading authority in IP strategy and management. With our holistic approach, we've enhanced the market value of startups and established companies across diverse industries.</p>
+      </div>
+      <div class="p-[16px] md:p-[32px] rounded-2xl border border-2 border-gradient-t-r from-#CCE7ED to-#8DB2BA md:ml-[12px] md:w-1/2">
+        <div class="pb-[24px] md:pb-[48px] text-[32px] leading-[32px]] md:leading-[40px] md:text-[40px] font-bold">Vision</div>
+        <p class="text-[18px] md:text-[20px">Our vision is to revolutionize IP strategy, setting new standards for innovation and fostering a global ecosystem where all businesses can confidently navigate IP intricacies and thrive.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-background-light pl-[16px] pr-[16px] md:pb-[40px] flex flex-col md:grid md:grid-cols-3 md:pl-[80px] md:pr-[80px]">
+    {historyItems.map((item, index) => {
+      const rightBorderExtension = item.year === 2019 || item.year === 2022 ? 'w-[80px] h-[1px] bg-border-primary absolute right-[-80px]' : '';
+      const leftBorderExtension = item.year === 2020 || item.year === 2023 ? 'hidden md:block w-[80px] h-[1px] bg-border-primary absolute left-[-80px] top-[22px]' : '';
+      const lastBorderHidden = item.year === 2023 ? 'md:hidden' : '';
+      return (
+        <div class="flex flex-col">
+          <div class="flex flex-row items-center">
+            <div class="card-style flex flex-row text-[18px] font-bold rounded-[28px] text-white bg-blue-1 pr-[16px] pl-[16px] pt-[8px] pb-[8px] border border-1 border-border-primary relative">
+              {item.year}
+              <div class={leftBorderExtension} />
+            </div>
+            <div class={`hidden md:flex w-full h-[1px] bg-border-primary relative ${lastBorderHidden}`}>
+              <div class={rightBorderExtension} />
+            </div>
+          </div>
+          <div class="flex flex-row">
+            <div class={`md:hidden ml-[37px] border border-[1px] border-border-primary ${index === (historyItems.length - 1) ? 'border-transparent' : ''}`} />
+            <div class="text-blue-2 text-[20px] ml-[11px] pt-[32px] pb-[40px]">{item.text}</div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</BaseLayout>
+
+<style>
+  .card-style {
+    width: fit-content
+  }
+</style>
