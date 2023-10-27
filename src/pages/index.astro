@@ -1,9 +1,12 @@
 ---
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
+import LetsTalk from '../components/LetsTalk.astro';
 import BaseLayout from '../layout/BaseLayout.astro';
+import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout>
-  content
+  <LetsTalk />
+  <Footer />
 </BaseLayout>
