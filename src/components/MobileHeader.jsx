@@ -21,7 +21,7 @@ const MobileHeader = () => {
 
   return (
     <>
-      <button className='md:hidden' aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>
+      <button className='md:hidden' aria-expanded={expanded} onClick={() => setExpanded(!expanded)} title='Menu'>
         <img src={expanded ? CloseImage.src : MenuImage.src} alt="Menu" />
       </button>
       {menu}

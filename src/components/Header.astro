@@ -3,12 +3,11 @@ import { Image } from 'astro:assets';
 import logoImage from '../images/logo.png';
 import MobileHeader from '../components/MobileHeader';
 import CalendlyButton from '../components/CalendlyButton';
+import Logo from './Logo.astro';
 ---
 
 <header class="h-[80px] p-[16px] md:pr-[80px] md:pl-[80px] flex justify-between items-center border-b border-border-primary">
-  <a href="/">
-    <Image src={logoImage} alt="Goodip homepage" width="144" height="30" />
-  </a>
+  <a href="/"><Logo /></a>
   <nav id="navbar" class="hidden md:flex">
     <a class="mr-[24px] lg:mr-[48px] ml-[48px] text-16 text-body-dark flex items-center" href="#strategy">Strategy</a>
     <a class="mr-[24px] lg:mr-[48px] text-16 text-body-dark flex items-center" href="#methods">Methods</a>
