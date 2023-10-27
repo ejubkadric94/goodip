@@ -1,4 +1,5 @@
 ---
+import LetsTalk from "../components/LetsTalk.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
 const historyItems = [{
   year: 2017,
@@ -28,11 +29,11 @@ const historyItems = [{
   <div class="bg-background-light pt-[40px] pr-[16px] pl-[16px] md:pt-[80px] md:pr-[80px] md:pl-[80px] text-body-dark">
     <h1 class="leading-[48px] text-center text-[40px] md:text-[56px] font-bold">About us</h1>
     <div class="pt-[40px] pb-[40px] md:pt-[80px] md:pb-[80px] md:flex">
-      <div class="p-[16px] md:p-[32px] mb-[24px] md:mb-0 rounded-2xl border border-2 border-gradient-t-r from-#CCE7ED to-#8DB2BA md:mr-[12px] md:w-1/2">
+      <div class="p-[16px] md:p-[32px] mb-[24px] md:mb-0 rounded-2xl border border-2 border-gradient-t-r from-turqoise-1 to-#8DB2BA md:mr-[12px] md:w-1/2">
         <div class="pb-[24px] md:pb-[48px] text-[32px] leading-[32px]] md:leading-[40px] md:text-[40px] font-bold">Mission</div>
         <p class="text-[18px] md:text-[20px">At GoodIP, we're driven by a singular mission: to empower innovators and businesses with strategic intellectual property (IP) advantages. Our aim is to protect, amplify, and maximize the value of your innovations. GoodIP is a leading authority in IP strategy and management. With our holistic approach, we've enhanced the market value of startups and established companies across diverse industries.</p>
       </div>
-      <div class="p-[16px] md:p-[32px] rounded-2xl border border-2 border-gradient-t-r from-#CCE7ED to-#8DB2BA md:ml-[12px] md:w-1/2">
+      <div class="p-[16px] md:p-[32px] rounded-2xl border border-2 border-gradient-t-r from-turqoise-1 to-#8DB2BA md:ml-[12px] md:w-1/2">
         <div class="pb-[24px] md:pb-[48px] text-[32px] leading-[32px]] md:leading-[40px] md:text-[40px] font-bold">Vision</div>
         <p class="text-[18px] md:text-[20px">Our vision is to revolutionize IP strategy, setting new standards for innovation and fostering a global ecosystem where all businesses can confidently navigate IP intricacies and thrive.</p>
       </div>
@@ -62,10 +63,14 @@ const historyItems = [{
       );
     })}
   </div>
+  <LetsTalk />
 </BaseLayout>
 
 <style>
   .card-style {
     width: fit-content
+  }
+  .repeat-bg {
+    background-repeat: repeat;
   }
 </style>

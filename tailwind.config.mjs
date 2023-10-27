@@ -13,7 +13,8 @@ export default {
         'background-light': '#faf7ee',
         'border-light-blue': '#8DB2BA',
         'blue-1': '#55B0C4',
-        'blue-2': '#00728B'
+        'blue-2': '#00728B',
+        'turqoise-1': '#CCE7ED',
       }
     },
 	},

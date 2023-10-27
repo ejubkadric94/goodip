@@ -10,7 +10,7 @@ const CalendlyButton = ({ className = "" }) => {
         */
       rootElement={document.getElementById("root")}
       text="Schedule a call"
-      className={`text-body-dark rounded-lg bg-action font-bold text-18 h-[48px] pr-[24px] pl-[24px] flex items-center ${className}`}
+      className={`text-body-dark rounded-lg bg-action font-bold text-18 h-[48px] pr-[24px] pl-[24px] flex items-center text-[18px] ${className}`}
     />
   );
 };
