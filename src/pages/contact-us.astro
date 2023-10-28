@@ -1,0 +1,14 @@
+---
+import Title from "../components/Title.astro";
+import BaseLayout from "../layout/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import ContactUsForm from "../components/ContactUsForm.jsx";
+---
+
+<BaseLayout>
+  <div class="bg-background-light flex flex-row pt-[40px] pb-[40px] pr-[16px] pl-[16px] md:p-[80px] flex flex-col">
+    <Title title="Contact us" className="text-center" />
+    <ContactUsForm client:only="react" />
+  </div>
+  <Footer />
+</BaseLayout>
