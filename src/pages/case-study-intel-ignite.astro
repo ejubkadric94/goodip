@@ -1,0 +1,49 @@
+---
+import Title from "../components/Title.astro";
+import BaseLayout from "../layout/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+
+import { Image } from 'astro:assets';
+import CaseStudyImage from '../images/case-study-intel-ignite.png';
+import LetsTalk from "../components/LetsTalk.astro";
+---
+
+<BaseLayout>
+  <div class="bg-background-light flex flex-row pt-[40px] pb-[40px] pr-[16px] pl-[16px] md:p-[80px] md:pt-0 md:pr-0">
+    <div class="md:pt-[80px] text-blue-2">
+      <Title title="Unlocking the Path to Intellectual Property Success: The GoodIP & Intel Ignite Partnership" className="text-body-dark leading-[48px] md:leading-[76px]" />
+      <p class="mt-[40px] md:mt-[64px] text-[20px] leading-[34px] tracking-[0.5px]">In the fast-paced world of startups and tech innovation, securing and leveraging intellectual property (IP) can be a daunting challenge. That's where GoodIP and Intel Ignite joined forces to redefine the way early-stage startups approach IP strategy.</p>
+      <Image src={CaseStudyImage} alt="Proglove" class="mt-[40px] md:mt-[64px]" />
+      <div class="mt-[40px] md:mt-[64px]">
+        <h2 class="text-[28px] text-body-dark font-semibold md:text-[36px] leading-[33px] md:leading-[43px]">The Problem</h2>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">ProGlove embarked on its journey with a groundbreaking concept – creating wearable technology designed to enhance the efficiency and safety of workers across industries. Their wearable barcode scanners promised to revolutionize workflows, but they faced a common challenge among startups: safeguarding their innovations from competitors.</p>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">Many startups entering the Intel Ignite accelerator program were brimming with groundbreaking ideas, but they often lacked a clear understanding of how to protect and capitalize on their innovations. Without a solid IP strategy, these promising startups risked losing their competitive edge in a market saturated with intellectual property disputes.</p>
+      </div>
+
+      <div class="mt-[40px] md:mt-[64px]">
+        <h2 class="text-[28px] text-body-dark font-semibold md:text-[36px] leading-[33px] md:leading-[43px]">The Solution</h2>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">GoodIP stepped in as a trusted partner, offering IP strategy coaching tailored to the unique needs of Intel Ignite's startups. Led by Bastian July, the founder and IP visionary at GoodIP, the team delivered workshops and one-on-one consultations that demystified the complex world of IP.</p>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">Through a blend of legal expertise and entrepreneurial insight, GoodIP helped these startups craft IP strategies that aligned with their business goals. The goal was clear: to ensure that every innovative idea translated into tangible assets that could be leveraged for growth and market dominance.</p>
+      </div>
+
+      <div class="mt-[40px] md:mt-[64px]">
+        <h2 class="text-[28px] text-body-dark font-semibold md:text-[36px] leading-[33px] md:leading-[43px]">The Results</h2>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">The results were nothing short of great. Startups that had once been uncertain about IP strategy now had a clear roadmap to follow. They understood the value of their intellectual property and how to protect it. This newfound knowledge empowered them to confidently navigate the competitive landscape and seize opportunities that might have otherwise slipped through their fingers.</p>
+      </div>
+
+      <div class="mt-[40px] md:mt-[64px]">
+        <h2 class="text-[28px] text-body-dark font-semibold md:text-[36px] leading-[33px] md:leading-[43px]">Conclusion</h2>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">Notably, Bastian July's presentations during the last program earned him the accolade of the "Best Speaker." This recognition wasn't just a feather in his cap; it underscored the impact GoodIP was making in the lives of these startups.</p>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">With GoodIP's support, Intel Ignite's startups were better equipped to maximize the potential of their innovations. They left the program not only with groundbreaking technologies but also with a strategic IP framework that could propel them toward success in the global market.</p>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">In partnership with Intel Ignite, GoodIP continues to be a driving force behind the intellectual property success stories of countless startups. The collaboration between these two visionary entities showcases the transformative power of a well-crafted IP strategy, proving that, with the right guidance, innovation knows no bounds.</p>
+      </div>
+
+    </div>
+    <LetsTalk
+      className="hidden md:flex md:p-[24px] min-w-[514px] ml-[40px] min-h-[calc(100vh-80px)] sticky top-[80px]"
+      textClassName="md:text-[36px] md:leading-[36px] md:mb-[40px]"
+    />
+  </div>
+  <LetsTalk className="md:hidden" />
+  <Footer />
+</BaseLayout>

@@ -1,16 +1,63 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
+import Title from "../components/Title.astro";
+import BaseLayout from "../layout/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+
+import { Image } from 'astro:assets';
+import CaseStudyImage from '../images/case-study-proglove.png';
+import LetsTalk from "../components/LetsTalk.astro";
 ---
-<!-- Below is your "component template." It's just HTML, but with
-     some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
-</html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
+
+<BaseLayout>
+  <div class="bg-background-light flex flex-row pt-[40px] pb-[40px] pr-[16px] pl-[16px] md:p-[80px] md:pt-0 md:pr-0">
+    <div class="md:pt-[80px] text-blue-2">
+      <Title title="Unlocking Success: How GoodIP Propelled ProGlove to a $500 Million Exit" className="text-body-dark leading-[48px] md:leading-[76px]" />
+      <p class="mt-[40px] md:mt-[64px] text-[20px] leading-[34px] tracking-[0.5px]">ProGlove, a pioneering industrial wearable technology startup, has made waves in the business world with its incredible $500 million exit. But behind this remarkable achievement lies a crucial partnership that helped ProGlove navigate the complex world of intellectual property (IP) – GoodIP. In this case study, we dive into the collaboration between these two entities, exploring the problem, the solution, and the astonishing results that ensued.</p>
+      <Image src={CaseStudyImage} alt="Proglove" class="mt-[40px] md:mt-[64px]" />
+      <div class="mt-[40px] md:mt-[64px]">
+        <h2 class="text-[28px] text-body-dark font-semibold md:text-[36px] leading-[33px] md:leading-[43px]">The Problem: Protecting Innovation in a Competitive Landscape</h2>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">ProGlove embarked on its journey with a groundbreaking concept – creating wearable technology designed to enhance the efficiency and safety of workers across industries. Their wearable barcode scanners promised to revolutionize workflows, but they faced a common challenge among startups: safeguarding their innovations from competitors.</p>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">The problem was twofold:</p>
+        <ol class="text-[18px] leading-[30.6px] tracking-[0.5px] list-decimal list-outside">
+          <li class="ml-[24px]">Intellectual Property Expertise: ProGlove's founders were tech-savvy visionaries but lacked the knowledge required to navigate the intricate world of IP.</li>
+          <li class="ml-[24px]">Design Protection: ProGlove's innovative device design needed safeguarding to prevent copycats from seizing their unique market advantage.</li>
+        </ol>
+      </div>
+
+      <div class="mt-[40px] md:mt-[64px]">
+        <h2 class="text-[28px] text-body-dark font-semibold md:text-[36px] leading-[33px] md:leading-[43px]">The Solution: GoodIP's Holistic IP Management</h2>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">ProGlove found a valuable ally in GoodIP, an IP strategy consultancy renowned for its innovative approach. GoodIP recognized that ProGlove needed more than just traditional patent services – they required holistic IP management to protect their technological, design, data, and branding assets comprehensively.</p>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">The key components of the solution were as follows:</p>
+        <ol class="text-[18px] leading-[30.6px] tracking-[0.5px] list-decimal list-outside">
+          <li class="ml-[24px]">Technology Expertise: GoodIP's team, led by founder Bastian July, offered ProGlove the tech-driven insights needed to make informed IP decisions. By reviewing ProGlove's ideas, patents, and designs, they ensured that the startup's IP portfolio was robust and future-proof.</li>
+          <li class="ml-[24px]">Design Protection: ProGlove's unique wearable design was a significant market differentiator. GoodIP worked tirelessly to ensure that this design was not only safeguarded but also optimized for maximum impact.</li>
+          <li class="ml-[24px]">Continuous Partnership: The collaboration wasn't a one-time engagement. GoodIP committed to an enduring partnership, offering regular evaluations, updates, and strategic adjustments. This ongoing commitment ensured that ProGlove's IP portfolio evolved in sync with the company's growth.</li>
+          <li class="ml-[24px]">Old Patent Acquisition: To further fortify ProGlove's position in the market, GoodIP recommended acquiring old patents. This unconventional strategy provided them with an invaluable shield against competitors who had been in the industry for decades.</li>
+        </ol>
+      </div>
+
+      <div class="mt-[40px] md:mt-[64px]">
+        <h2 class="text-[28px] text-body-dark font-semibold md:text-[36px] leading-[33px] md:leading-[43px]">The Results: A Half-Billion Dollar Exit</h2>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">The impact of GoodIP's expertise was nothing short of remarkable. As ProGlove continued to grow, their intellectual property became a formidable asset. </p>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">Here are the astonishing results:</p>
+        <ol class="text-[18px] leading-[30.6px] tracking-[0.5px] list-decimal list-outside">
+          <li class="ml-[24px]">Value Amplification: ProGlove's valuation surged dramatically. GoodIP's holistic IP management, innovative design protection, and technology-driven insights played a pivotal role in increasing the startup's worth.</li>
+          <li class="ml-[24px]">Competitive Advantage: ProGlove's IP portfolio gave them a significant edge in the market. Copycats were kept at bay, ensuring that ProGlove remained a trailblazer in the industry.</li>
+          <li class="ml-[24px]">Exit Success: ProGlove achieved a staggering $500 million exit, marking a monumental achievement in their journey. GoodIP's contribution to this extraordinary accomplishment cannot be overstated.</li>
+        </ol>
+      </div>
+
+      <div class="mt-[40px] md:mt-[64px]">
+        <h2 class="text-[28px] text-body-dark font-semibold md:text-[36px] leading-[33px] md:leading-[43px]">Conclusion</h2>
+        <p class="mt-[24px] md:mt-[40px] text-[18px] leading-[30.6px] tracking-[0.5px]">The collaboration between ProGlove and GoodIP showcases the transformative power of innovative IP strategy. GoodIP's holistic approach to IP management, combined with their tech expertise, design protection, and ongoing support, has not only protected ProGlove's innovations but has also helped them achieve greater heights. This case study serves as a testament to the crucial role that IP strategy plays in the success of startups, particularly in competitive industries. It highlights the immense value that can be achieved through the right partnership and strategic approach, ultimately leading to groundbreaking exits and lasting impact in the business world. </p>
+      </div>
+
+    </div>
+    <LetsTalk
+      className="hidden md:flex md:p-[24px] min-w-[514px] ml-[40px] min-h-[calc(100vh-80px)] sticky top-[80px]"
+      textClassName="md:text-[36px] md:leading-[36px] md:mb-[40px]"
+    />
+  </div>
+  <LetsTalk className="md:hidden" />
+  <Footer />
+</BaseLayout>

@@ -6,7 +6,7 @@ import ScrollUp from "./ScrollUp";
 const { className } = Astro.props;
 ---
 
-<div class={`pb-[40px] pt-[40px] pl-[16px] pr-[16px] md:p-[80px] ${className}`}>
+<div class={`pb-[40px] pt-[40px] pl-[16px] pr-[16px] md:p-[80px] border-t border-t-1 border-border-primary ${className || ""}`}>
   <div class="flex flex-col md:flex-row">
     <div class="mb-[24px] md:mb-0 md:mr-[120px]">
       <Logo />
@@ -28,8 +28,8 @@ const { className } = Astro.props;
     <div class="text-body-dark hidden md:flex items-center">©2023 GoodIP. All rights reserved.</div>
     <a href="/about-us" class="text-body-dark text-[16px] leading-[16px] pt-[8px] pb-[8px]">Company</a>
     <a href="/legal-notice" class="text-body-dark text-[16px] leading-[16px] pt-[8px] pb-[8px]">Legal notice</a>
-    <a href="#" class="text-body-dark text-[16px] leading-[16px] pt-[8px] pb-[8px]">Terms and conditions</a>
-    <a href="#" class="text-body-dark text-[16px] leading-[16px] pt-[8px] pb-[8px]">Contact us</a>
+    <a href="/terms-and-conditions" class="text-body-dark text-[16px] leading-[16px] pt-[8px] pb-[8px]">Terms and conditions</a>
+    <a href="/contact-us" class="text-body-dark text-[16px] leading-[16px] pt-[8px] pb-[8px]">Contact us</a>
   </div>
   <div class="md:hidden w-full mt-[24px] mb-[24px] h-[1px] bg-border-primary" /> <!-- horizontal border row -->
   <div class="md:hidden text-body-dark flex items-center">©2023 GoodIP. All rights reserved.</div>
