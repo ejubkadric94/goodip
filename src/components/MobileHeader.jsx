@@ -28,7 +28,8 @@ const MobileHeader = () => {
         <a ref={menuRefLink} onClick={() => setExpanded(false)} class="h-[48px] text-16 text-body-dark flex justify-around items-center" href="/#strategy">Strategy</a>
         <a onClick={() => setExpanded(false)} class="h-[48px] text-16 text-body-dark flex justify-around items-center" href="/#methods">Methods</a>
         <a onClick={() => setExpanded(false)} class="h-[48px] text-16 text-body-dark flex justify-around items-center" href="/#team">Team</a>
-        <a onClick={() => setExpanded(false)} class="h-[48px] text-16 text-body-dark flex justify-around items-center" href="/#startup-stories">Startup Stories</a>
+        <a onClick={() => setExpanded(false)} class="h-[48px] text-16 text-body-dark flex justify-around items-center" href="/#startups">Startups</a>
+        <a onClick={() => setExpanded(false)} class="h-[48px] text-16 text-body-dark flex justify-around items-center" href="/#stories">Stories</a>
         <CalendlyButton className="w-full justify-around" client:only="react" />
       </div>
     );

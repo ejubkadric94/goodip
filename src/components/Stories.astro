@@ -1,0 +1,33 @@
+---
+import CaseStudyProgloveFullyRounded from '../images/case-study-proglove.png';
+import CaseStudyProglove from '../images/case-study-proglove-1.png';
+import CaseStudyIntelIgniteFullyRounded from '../images/case-study-intel-ignite.png';
+import CaseStudyIntelIgnite from '../images/case-study-intel-ignite-1.png';
+import { Image } from 'astro:assets';
+---
+
+<div class="bg-background-light flex flex-col" id="stories">
+  <h2 class="pt-[40px] pb-[24px] md:p-[80px] text-body-dark text-[40px] leading-[40px] md:text-[60px] md:font-bold tracking-[0.5px] font-extrabold text-center">Success Stories</h2>
+  <div class="flex flex-col md:flex-row-reverse">
+    <div class="mr-[16px] ml-[16px] md:shrink-0 md:w-1/2 lg:w-auto md:mr-0 md:ml-[64px]">
+      <Image src={CaseStudyProglove} alt="Proglove" class='hidden md:block' />
+      <Image src={CaseStudyProgloveFullyRounded} alt="Proglove" class='md:hidden' />
+    </div>
+    <div class="pr-[16px] pl-[16px] flex flex-col md:pl-[80px] md:pr-0">
+      <h3 class="mt-[24px] text-body-dark text-[40px] leading-[40px] font-extrabold md:text-[60px] md:leading-[76px] md:font-bold tracking-[0.5px]">Proglove’s $500m exit</h3>
+      <p class="mt-[24px] text-blue-2 text-[20px] tracking-[0.5px]">ProGlove, a pioneering industrial wearable technology startup, has made waves in the business world with its incredible $500 million exit. But behind this remarkable achievement lies a crucial partnership that helped ProGlove navigate the complex world of intellectual property (IP) – GoodIP.</p>
+      <a href="/case-study-proglove" class="text-body-dark text-[18px] font-bold underline leading-[18px] tracking-[0.9px] pt-[16px] pb-[16px] mt-[24px]">Continue reading</a>
+    </div>
+  </div>
+  <div class="mt-[24px] md:mt-[80px] mb-[40px] md:mb-[80px] flex flex-col md:flex-row">
+    <div class="mr-[16px] ml-[16px] md:shrink-0 md:w-1/2 lg:w-auto md:mr-0 md:ml-0">
+      <Image src={CaseStudyIntelIgnite} alt="Proglove" class='hidden md:block' />
+      <Image src={CaseStudyIntelIgniteFullyRounded} alt="Proglove" class='md:hidden' />
+    </div>
+    <div class="pr-[16px] pl-[16px] flex flex-col md:pl-[64px] md:pr-[80px]">
+      <h3 class="mt-[24px] text-body-dark text-[40px] leading-[40px] font-extrabold md:text-[60px] md:leading-[76px] md:font-bold tracking-[0.5px]">Work with Intel Ignite</h3>
+      <p class="mt-[24px] text-blue-2 text-[20px] tracking-[0.5px]">In the fast-paced world of startups and tech innovation, securing and leveraging intellectual property (IP) can be a daunting challenge. That's where GoodIP and Intel Ignite joined forces to redefine the way early-stage startups approach IP strategy.</p>
+      <a href="/case-study-intel-ignite" class="text-body-dark text-[18px] font-bold underline leading-[18px] tracking-[0.9px] pt-[16px] pb-[16px] mt-[24px]">Continue reading</a>
+    </div>
+  </div>
+</div>

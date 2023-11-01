@@ -1,0 +1,54 @@
+---
+import proglove from '../images/startups/proglove.png';
+import hyperdrives from '../images/startups/hyperdrives.png';
+import kiutra from '../images/startups/kiutra.png';
+import akhetonics from '../images/startups/akhetonics.png';
+import corintis from '../images/startups/corintis.png';
+import traplinkod from '../images/startups/traplinkod.png';
+import enlightra from '../images/startups/enlightra.png';
+import invitris from '../images/startups/invitris.png';
+import { Image } from 'astro:assets';
+---
+
+<div class="bg-gradient p-[16px] pb-[40px] pt-[40px] md:p-[80px]" id="startups">
+  <h3 class="text-blue-3 text-[20px] leading-[20px] tracking-[0.5px] mb-[16px]">TRUSTED BY</h3>
+  <div class="flex flex-row flex-wrap justify-between items-center">
+    <Image class='h-fit mb-[16px]' src={proglove} alt='proglove'/>
+    <Image class='h-fit mb-[16px] ml-[24px]' src={hyperdrives} alt='hyperdrives'/>
+    <Image class='h-fit mb-[16px] ml-[24px]' src={kiutra} alt='kiutra'/>
+    <Image class='h-fit mb-[16px] ml-[24px]' src={akhetonics} alt='akhetonics'/>
+    <Image class='h-fit mb-[16px] ml-[24px]' src={corintis} alt='corintis'/>
+    <Image class='h-fit mb-[16px] ml-[24px]' src={traplinkod} alt='traplinkod'/>
+    <Image class='h-fit mb-[16px] ml-[24px]' src={enlightra} alt='enlightra'/>
+    <Image class='h-fit mb-[16px] ml-[24px]' src={invitris} alt='invitris'/>
+  </div>
+  <div class="flex flex-col md:flex-row  grid-cols-3">
+    <div class=" bg-blue-3 text-blue-4 rounded-2xl p-[32px] flex flex-col md:w-1/3 md:min-h-[366px]" id="card1">
+      <p class="text-[20px] font-medium leading-[32px] tracking-[0.5px] flex-grow">“GoodIP helps us to remove the complexity of patents, using AI to --- the patents to the key elements that really matter for our business.”</p>
+      <div>
+        <div class="mt-[16px] text-[20px] font-bold leading-[20px] tracking-[0.5px]">Patrick Grossmann</div>
+        <div class="mt-[16px] text-[20px] leading-[20px] tracking-[0.5px] italic">Co-founder @ Invitris</div>
+      </div>
+    </div>
+    <div class="mt-[16px] md:mt-0 bg-blue-3 text-blue-4 rounded-2xl p-[32px] flex flex-col md:ml-[24px] md:w-1/3 md:min-h-[366px]" id="card2">
+      <p class="text-[20px] font-medium leading-[32px] tracking-[0.5px] flex-grow">““GoodIP helps us to show investors that a few very well written patents increase the value of the company much more.”</p>
+      <div>
+        <div class="mt-[16px] text-[20px] font-bold leading-[20px] tracking-[0.5px]">Patrick Grossmann</div>
+        <div class="mt-[16px] text-[20px] leading-[20px] tracking-[0.5px] italic">Co-founder @ Invitris</div>
+      </div>
+    </div>
+    <div class="mt-[16px] md:mt-0 bg-blue-3 text-blue-4 rounded-2xl p-[32px] flex flex-col md:ml-[24px] md:w-1/3 md:min-h-[366px]" id="card3">
+      <p class="text-[20px] font-medium leading-[32px] tracking-[0.5px] flex-grow">“GoodIP is very different because they are really coming to the point, not wasting your time and clearly giving transparent measures on what to do and what not to do.”</p>
+      <div>
+        <div class="mt-[16px] text-[20px] font-bold leading-[20px] tracking-[0.5px]">Patrick Grossmann</div>
+        <div class="mt-[16px] text-[20px] leading-[20px] tracking-[0.5px] italic">Co-founder @ Invitris</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bg-gradient {
+    background: linear-gradient(191deg, #5C909B 0%, #8DB2BA 100%);
+  }
+</style>

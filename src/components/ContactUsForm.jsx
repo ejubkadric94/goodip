@@ -4,7 +4,6 @@ const ContactUsForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors }
   } = useForm({
     defaultValues: {
@@ -15,7 +14,9 @@ const ContactUsForm = () => {
     }
   });
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = (data) => {
+    const fullName = escape(data.fullName)
+  }
 
   // const onSubmit = async () => {
   //   try {
@@ -41,7 +42,7 @@ const ContactUsForm = () => {
           placeholder="Full Name"
           className="w-full pt-[16px] pb-[16px] pr-[24px] pl-[24px] border border-1 border-border-primary rounded-lg placeholder:text-body-dark placeholder:leading-[21px] placeholder:text-[14px] placeholder:text-opacity-50"
         />
-        {/* {errors.fullName && <p>This field is required</p>} */}
+        {errors.fullName && <div className="text-[red]">This field is required</div>}
       </div>
 
       <div className="w-full md:w-[540px] mx-auto">
@@ -51,7 +52,7 @@ const ContactUsForm = () => {
           placeholder="Email"
           className="w-full pt-[16px] pb-[16px] pr-[24px] pl-[24px] border border-1 border-border-primary rounded-lg placeholder:text-body-dark placeholder:leading-[21px] placeholder:text-[14px] placeholder:text-opacity-50"
         />
-        {/* {errors.email && <p>{errors.email}</p>} */}
+        {errors.email && <div className="text-[red]">Invalid email</div>}
       </div>
 
       <div className="w-full md:w-[540px] mx-auto">
@@ -70,10 +71,14 @@ const ContactUsForm = () => {
           placeholder="What can we help you with?"
           className="resize-none h-[175px] w-full pt-[16px] pb-[16px] pr-[24px] pl-[24px] border border-1 border-border-primary rounded-lg placeholder:text-body-dark placeholder:leading-[21px] placeholder:text-[14px] placeholder:text-opacity-50"
         />
-        {/* {errors.question && <p>{errors.question}</p>} */}
+        {errors.question && <div className="text-[red]">This field is required</div>}
       </div>
 
-      <input type="submit" value="Send a message" className="md:w-[540px] mx-auto mt-[24px] text-body-dark rounded-lg bg-action font-bold text-18 h-[48px] pr-[24px] pl-[24px] flex items-center text-[18px] w-full justify-around placeholder:text-body-dark" />
+      <input 
+        type="submit"
+        value="Send a message"
+        className="cursor-pointer md:w-[540px] mx-auto mt-[24px] text-body-dark rounded-lg bg-action font-bold text-18 h-[48px] pr-[24px] pl-[24px] flex items-center text-[18px] w-full justify-around placeholder:text-body-dark"
+      />
     </form>
   )
 };

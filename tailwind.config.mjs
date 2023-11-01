@@ -14,6 +14,8 @@ export default {
         'border-light-blue': '#8DB2BA',
         'blue-1': '#55B0C4',
         'blue-2': '#00728B',
+        'blue-3': '#002E38',
+        'blue-4': '#C9E5EB',
         'turqoise-1': '#CCE7ED',
       }
     },
