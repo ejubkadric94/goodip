@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Step1Image from '../images/strategy/step-1.svg';
 import Step2Image from '../images/strategy/step-2.svg';
 import Step3Image from '../images/strategy/step-3.svg';
@@ -13,6 +13,17 @@ const Steps = {
 
 const StrategyMenu = () => {
   const [step, setStep] = useState(Steps.IncreaseValuation);
+
+  const preloadImage = useCallback((imgUrl) => {
+    const img = new Image();
+    img.src = imgUrl;
+  }, []);
+
+  useEffect(() => {
+    preloadImage(Step2Image.src);
+    preloadImage(Step3Image.src);
+    preloadImage(Step4Image.src);
+  }, []);
 
   let currentImage;
   switch (step) {
