@@ -23,7 +23,7 @@ const ContactUsForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ fullName: 'EJUB'}),
+        body: JSON.stringify(data),
       });
       console.log('sent!');
     } catch (error) {
