@@ -50,6 +50,7 @@ const StrategyMenu = () => {
             const selectedClasses = item === step ? 'font-bold bg-turqoise-1 border-b-2 pb-[17px]' : ' pb-[18px]';
             return (
               <button
+                key={item}
                 onClick={() => setStep(item)}
                 className={`text-body-dark pt-[16px] pb-[16px] pl-[24px] pr-[24px] text-[18px] leading-[18px] font-medium border-b border-b-1 border-body-dark rounded-t-[8px] ${selectedClasses}`}
               >

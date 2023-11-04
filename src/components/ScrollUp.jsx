@@ -1,14 +1,30 @@
+import { useState, useEffect, useCallback } from 'react';
 import ArrowUpImage from '../images/arrow-up.svg';
-import { useCallback } from 'react';
-// const { className } = Astro.props;
 
 const ScrollUp = ({ className = "" }) => {
+  const [showScroller, setShowScroller] = useState(false);
+
+  const handleScroll = useCallback(() => {
+    if (window.scrollY === 0 && showScroller) {
+      setShowScroller(false);
+    } else if (!showScroller && window.scrollY !== 0) {
+      setShowScroller(true);
+    }
+  }, [showScroller])
+
+  useEffect(() => {
+    document.addEventListener('scroll', handleScroll);
+    return () => document.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
   const onClick = useCallback(() => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }, []);
 
-
+  if (!showScroller) {
+    return null;
+  }
 
   return (
     <>
