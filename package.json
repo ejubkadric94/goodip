@@ -19,6 +19,8 @@
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
     "astro": "^3.3.2",
+    "moment-timezone": "^0.5.43",
+    "nodemailer": "^6.9.7",
     "react": "^18.2.0",
     "react-calendly": "^4.3.0",
     "react-dom": "^18.2.0",

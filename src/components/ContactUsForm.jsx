@@ -14,21 +14,21 @@ const ContactUsForm = () => {
     }
   });
 
-  const onSubmit = (data) => {
-    const fullName = escape(data.fullName)
-  }
-
-  // const onSubmit = async () => {
-  //   try {
-  //     console.log('sending...');
-  //     const request = await fetch('.netlify/functions/contact', {
-  //       method: 'POST',
-  //     });
-  //     console.log('sent!');
-  //   } catch (error) {
-  //     console.log('error: ', error);
-  //   }
-  // };
+  const onSubmit = async (data) => {
+    try {
+      console.log('sending...');
+      const request = await fetch('.netlify/functions/contact', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ fullName: 'EJUB'}),
+      });
+      console.log('sent!');
+    } catch (error) {
+      console.log('error: ', error);
+    }
+  };
 
   return (
     <form
