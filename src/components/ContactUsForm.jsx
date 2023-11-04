@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 
+
 const ContactUsForm = () => {
   const {
     register,
@@ -17,7 +18,7 @@ const ContactUsForm = () => {
   const onSubmit = async (data) => {
     try {
       console.log('sending...');
-      const request = await fetch('.netlify/functions/contact', {
+      const request = await fetch(import.meta.env.PUBLIC_DOMAIN + '/.netlify/functions/contact', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
