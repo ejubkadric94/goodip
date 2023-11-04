@@ -24,7 +24,7 @@ const MobileHeader = () => {
   let menuPortal;
   if (expanded) {
     const menu = (
-      <div className='absolute top-[80px] left-0 bg-white w-full h-[calc(100%-80px)] flex flex-col pl-[16px] pr-[16px]'>    
+      <div className='absolute z-50 top-[80px] left-0 bg-white w-full h-[calc(100%-80px)] flex flex-col pl-[16px] pr-[16px]'>    
         <a ref={menuRefLink} onClick={() => setExpanded(false)} class="h-[48px] text-16 text-body-dark flex justify-around items-center" href="/#strategy">Strategy</a>
         <a onClick={() => setExpanded(false)} class="h-[48px] text-16 text-body-dark flex justify-around items-center" href="/#how-we-work">Methods</a>
         <a onClick={() => setExpanded(false)} class="h-[48px] text-16 text-body-dark flex justify-around items-center" href="/#team">Team</a>

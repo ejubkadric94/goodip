@@ -1,7 +1,7 @@
 ---
 import CalendlyButton from "./CalendlyButton";
 import greenBackgroundImage from "../images/green-background-2.png";
-const origin = Astro.url.origin;
+const origin = import.meta.env.PUBLIC_DOMAIN;
 const className = Astro.props.className || ''; 
 const textClassName = Astro.props.textClassName || '';
 ---
