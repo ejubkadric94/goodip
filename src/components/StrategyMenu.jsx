@@ -3,6 +3,10 @@ import Step1Image from '../images/strategy/step-1.svg';
 import Step2Image from '../images/strategy/step-2.svg';
 import Step3Image from '../images/strategy/step-3.svg';
 import Step4Image from '../images/strategy/step-4.svg';
+import Step1MobileImage from '../images/strategy/step-1-mobile.svg';
+import Step2MobileImage from '../images/strategy/step-2-mobile.svg';
+import Step3MobileImage from '../images/strategy/step-3-mobile.svg';
+import Step4MobileImage from '../images/strategy/step-4-mobile.svg';
 
 const Steps = {
   IncreaseValuation: 'Increase valuation',
@@ -20,25 +24,35 @@ const StrategyMenu = () => {
   }, []);
 
   useEffect(() => {
-    preloadImage(Step2Image.src);
-    preloadImage(Step3Image.src);
-    preloadImage(Step4Image.src);
+    if (window.innerWidth >= 768) {
+      preloadImage(Step2Image.src);
+      preloadImage(Step3Image.src);
+      preloadImage(Step4Image.src);
+    } else {
+      preloadImage(Step2MobileImage.src);
+      preloadImage(Step3MobileImage.src);
+      preloadImage(Step4MobileImage.src);
+    }
   }, []);
 
-  let currentImage;
+  let currentImage, currentImageMobile;
   switch (step) {
     case Steps.SecureFunding:
       currentImage = Step2Image.src;
+      currentImageMobile = Step2MobileImage.src;
       break;
     case Steps.MinimizeRisk:
       currentImage = Step3Image.src;
+      currentImageMobile = Step3MobileImage.src;
       break;
     case Steps.PreventIpTheft:
       currentImage = Step4Image.src;
+      currentImageMobile = Step4MobileImage.src;
       break;
     case Steps.IncreaseValuation:
     default:
       currentImage = Step1Image.src;
+      currentImageMobile = Step1MobileImage.src;
       break;
   }
 
@@ -60,8 +74,9 @@ const StrategyMenu = () => {
           })}
         </div>
       </div>
-      <div className="flex flex-row justify-center">
-        <img src={currentImage} alt="Strategy image" />
+      <div className="flex flex-row justify-center mt-[48px]">
+        <img className="hidden md:block" src={currentImage} alt="Strategy image" />
+        <img className="md:hidden" src={currentImageMobile} alt="Strategy image" />
       </div>
     </div>
   )
