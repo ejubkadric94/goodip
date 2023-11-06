@@ -6,10 +6,12 @@ import Footer from "../components/Footer.astro";
 import { Image } from 'astro:assets';
 import CaseStudyImage from '../images/case-study-proglove.png';
 import LetsTalk from "../components/LetsTalk.astro";
+import ContactBefore from "../components/ContactBefore";
 ---
 
 <BaseLayout>
-  <div class="bg-background-light flex flex-row pt-[40px] pb-[40px] pr-[16px] pl-[16px] md:pl-[80px] md:pt-0 md:pr-0 md:pb-0">
+  <ContactBefore client:only="react" />
+  <div class="bg-background-light flex flex-row pt-[40px] pb-[40px] pr-[16px] pl-[16px] md:pl-[80px] md:pt-0 md:pr-0 md:pb-0 relative hidden" id="hidden-part">
     <div class="md:pt-[80px] text-blue-2">
       <Title title="Unlocking Success: How GoodIP Propelled ProGlove to a $500 Million Exit" className="text-body-dark leading-[48px] md:leading-[76px]" />
       <p class="mt-[40px] md:mt-[64px] text-[20px] leading-[34px] tracking-[0.5px]">ProGlove, a pioneering industrial wearable technology startup, has made waves in the business world with its incredible $500 million exit. But behind this remarkable achievement lies a crucial partnership that helped ProGlove navigate the complex world of intellectual property (IP) – GoodIP. In this case study, we dive into the collaboration between these two entities, exploring the problem, the solution, and the astonishing results that ensued.</p>
@@ -58,6 +60,6 @@ import LetsTalk from "../components/LetsTalk.astro";
       textClassName="md:text-[36px] md:leading-[36px] md:mb-[40px]"
     />
   </div>
-  <LetsTalk className="md:hidden" />
+  <LetsTalk className="md:hidden hidden" id="hidden-letsTalk" />
   <Footer />
 </BaseLayout>

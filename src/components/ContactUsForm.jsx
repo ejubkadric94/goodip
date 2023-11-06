@@ -13,7 +13,8 @@ const ContactUsForm = () => {
       fullName: "",
       email: "",
       company: "",
-      question: ""
+      question: "",
+      acceptPrivacyPolicy: false,
     }
   });
 
@@ -87,6 +88,16 @@ const ContactUsForm = () => {
             className="resize-none h-[175px] w-full pt-[16px] pb-[16px] pr-[24px] pl-[24px] border border-1 border-border-primary rounded-lg placeholder:text-body-dark placeholder:leading-[21px] placeholder:text-[14px] placeholder:text-opacity-50"
           />
           {errors.question && <div className="text-[red]">This field is required</div>}
+        </div>
+
+        <div className="w-full md:w-[540px] mx-auto">
+          <input
+            type='checkbox'
+            {...register("acceptPrivacyPolicy", { required: true })}
+            className='mr-[12px] mt-[24px]'
+          />
+          <label className="text-blue-2 font-semibold">I accept the privacy policy</label>
+          {errors.acceptPrivacyPolicy && <div className="text-[red]">This field is required</div>}
         </div>
   
         <input 
