@@ -7,8 +7,9 @@ import Step1MobileImage from '../images/strategy/step-1-mobile.svg';
 import Step2MobileImage from '../images/strategy/step-2-mobile.svg';
 import Step3MobileImage from '../images/strategy/step-3-mobile.svg';
 import Step4MobileImage from '../images/strategy/step-4-mobile.svg';
+import StrategyMobileMenu from './StrategyMobileMenu';
 
-const Steps = {
+const STEPS = {
   IncreaseValuation: 'Increase valuation',
   SecureFunding: 'Secure funding',
   MinimizeRisk: 'Minimize risk',
@@ -16,7 +17,7 @@ const Steps = {
 };
 
 const StrategyMenu = () => {
-  const [step, setStep] = useState(Steps.IncreaseValuation);
+  const [step, setStep] = useState(STEPS.IncreaseValuation);
 
   const preloadImage = useCallback((imgUrl) => {
     const img = new Image();
@@ -37,43 +38,52 @@ const StrategyMenu = () => {
 
   let currentImage, currentImageMobile;
   switch (step) {
-    case Steps.SecureFunding:
+    case STEPS.SecureFunding:
       currentImage = Step2Image.src;
       currentImageMobile = Step2MobileImage.src;
       break;
-    case Steps.MinimizeRisk:
+    case STEPS.MinimizeRisk:
       currentImage = Step3Image.src;
       currentImageMobile = Step3MobileImage.src;
       break;
-    case Steps.PreventIpTheft:
+    case STEPS.PreventIpTheft:
       currentImage = Step4Image.src;
       currentImageMobile = Step4MobileImage.src;
       break;
-    case Steps.IncreaseValuation:
+    case STEPS.IncreaseValuation:
     default:
       currentImage = Step1Image.src;
       currentImageMobile = Step1MobileImage.src;
       break;
   }
 
+        
   return (
     <div>
-      <div className="flex flex-row justify-around">
-        <div>
-          {Object.values(Steps).map(item => {
-            const selectedClasses = item === step ? 'font-bold bg-turqoise-1 border-b-2 pb-[17px]' : ' pb-[18px]';
-            return (
-              <button
-                key={item}
-                onClick={() => setStep(item)}
-                className={`text-body-dark pt-[16px] pb-[16px] pl-[24px] pr-[24px] text-[18px] leading-[18px] font-medium border-b border-b-1 border-body-dark rounded-t-[8px] ${selectedClasses}`}
-              >
-                {item}
-              </button>
-            );
-          })}
+      <div className="hidden md:flex flex-row justify-around">
+        <div className='flex flex-row '>
+          <div className='overflow-x-auto flex flex-row'>
+            {Object.values(STEPS).map(item => {
+              const selectedClasses = item === step ? 'font-bold bg-turqoise-1 border-b-2 pb-[17px]' : ' pb-[18px]';
+              return (
+                <button
+                  key={item}
+                  onClick={() => setStep(item)}
+                  className={`text-body-dark pt-[16px] pb-[16px] pl-[24px] pr-[24px] text-[18px] leading-[18px] font-medium border-b border-b-1 border-body-dark rounded-t-[8px] ${selectedClasses}`}
+                >
+                  {item}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
+      <StrategyMobileMenu
+        className="md:hidden"
+        steps={STEPS}
+        setStep={setStep}
+        step={step}
+      />
       <div className="flex flex-row justify-center mt-[48px]">
         <img className="hidden md:block" src={currentImage} alt="Strategy image" />
         <img className="md:hidden" src={currentImageMobile} alt="Strategy image" />
